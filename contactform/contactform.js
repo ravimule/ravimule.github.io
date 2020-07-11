@@ -91,27 +91,35 @@ jQuery(document).ready(function($) {
     if (ferror) return false;
     else var str = $(this).serialize();
     var action = $(this).attr('action');
-    if( ! action ) {
-      action = 'contactform/contactform.php';
-    }
-    $.ajax({
-      type: "POST",
-      url: action,
-      data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
-        }
 
-      }
-    });
+    // try Mandrill next https://medium.com/@mariusc23/send-an-email-using-only-javascript-b53319616782
+
+    $(".loader").show();
+   var template_params = {
+     "from_name": $("#name").val(),
+     "from_email": $("#email").val(),
+     "to_name": "Ravi",
+     "subject": $("#subject").val(),
+     "message_html": $("#message").val()
+  }
+
+    var service_id = "default_service";
+    var template_id = "template_UuB4Wa2N";
+
+  emailjs.send(service_id, template_id, template_params)
+  .then(function(response) {
+      $(".loader").hide();
+     console.log('SUCCESS!', response.status, response.text);
+     $("#sendmessage").addClass("show");
+    $("#errormessage").removeClass("show");
+    $('.contactForm').find("input, textarea").val("");
+  }, function(error) {
+      $(".loader").hide();
+     $("#sendmessage").removeClass("show");
+      $("#errormessage").addClass("show");
+      $('#errormessage').html(msg);
+  });
+
     return false;
   });
 
