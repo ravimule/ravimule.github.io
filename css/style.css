@@ -273,6 +273,7 @@ h6 {
 #intro .carousel-control-prev,
 #intro .carousel-control-next {
   width: 10%;
+  display: none;
 }
 
 #intro .carousel-control-next-icon,
@@ -1532,6 +1533,14 @@ img.pro_dev {
   background-color: black;
 }
 
+img.center.main-img {
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -1597,5 +1606,8 @@ img.pro_dev {
 
   #mobile-nav-toggle {
     display: inline;
+  }
+  img.center.main-img {
+    width: 170px;
   }
 }
