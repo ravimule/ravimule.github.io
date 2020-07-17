@@ -1650,11 +1650,6 @@ img.center.main-img {
 
 }
 @media (max-width: 400px) {
-  #skills .progress .skill {
-    margin: 0px 0 0 10px;
-  }
-  #skills .progress .skill .val {
-    margin: 0 10px 0 0;
-    font-size: 10px;
-  }
+  #skills .progress .skill { margin: 0px 0 0 10px; font-size: 10px; }
+  #skills .progress .skill .val { margin: 0 10px 0 0; }
 }
