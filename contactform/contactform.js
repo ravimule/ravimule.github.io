@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 
     // try Mandrill next https://medium.com/@mariusc23/send-an-email-using-only-javascript-b53319616782
 
-    $("#preloader").show();
+    $("#contact-preloader").show();
    var template_params = {
      "from_name": $("#name").val(),
      "from_email": $("#email").val(),
@@ -108,7 +108,9 @@ jQuery(document).ready(function($) {
 
   emailjs.send(service_id, template_id, template_params)
   .then(function(response) {
-      $("#preloader").hide();
+     if ($('#contact-preloader').length) {
+        $('#contact-preloader').delay(100).fadeOut('slow');
+     }
      console.log('SUCCESS!', response.status, response.text);
      $("#sendmessage").addClass("show");
     $("#errormessage").removeClass("show");
