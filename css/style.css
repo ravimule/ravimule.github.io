@@ -1655,5 +1655,6 @@ img.center.main-img {
   }
   #skills .progress .skill .val {
     margin: 0 10px 0 0;
+    font-size: 10px;
   }
 }
