@@ -1570,6 +1570,15 @@ img.center.main-img {
   100% { transform: rotate(360deg); }
 }
 
+.logo-left {
+    float: left;
+    margin-top: -8px;
+    padding-right: 10px;
+}
+.logo-left img {
+    width: 50px;
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -1594,8 +1603,8 @@ img.center.main-img {
 }
 
 @media (min-width: 1024px) {
-  #header #logo {
-    padding-left: 60px;
+  .logo-left {
+      padding-left: 55px;
   }
 
   #intro p {
@@ -1646,6 +1655,14 @@ img.center.main-img {
     left: 0;
     bottom: 0;
     right: 0;  
+  }
+  .logo-left {
+      float: left;
+      margin-top: -6px;
+      padding-right: 10px;
+  }
+  .logo-left img {
+      width: 40px;
   }
 
 }
