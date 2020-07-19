@@ -818,5 +818,15 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "00ec75b1-5f47-4b88-b213-555286afc441",
+      });
+    });
+  </script>
+
 </body>
 </html>
