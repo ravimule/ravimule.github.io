@@ -1589,6 +1589,13 @@ img.center.main-img {
     width: 50px;
 }
 
+.footer-info p {
+    width: 85px;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -1614,7 +1621,7 @@ img.center.main-img {
 
 @media (min-width: 1024px) {
   .logo-left {
-      padding-left: 55px;
+      padding-left: 40px;
   }
 
   #intro p {
