@@ -1596,6 +1596,12 @@ img.center.main-img {
     text-align: center;
 }
 
+p.adobe {
+    margin-top: 20px;
+    position: relative;
+}
+p.adobe img{ width: 320px }
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -1681,6 +1687,8 @@ img.center.main-img {
   .logo-left img {
       width: 40px;
   }
+
+  p.adobe img{ width: 225px }
 
 }
 @media (max-width: 400px) {
